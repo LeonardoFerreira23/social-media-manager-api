@@ -1,5 +1,7 @@
 # Social Media Manager API
 
+![CI](https://github.com/LeonardoFerreira23/social-media-manager-api/actions/workflows/ci.yml/badge.svg)
+
 A REST API to register and read social media posts. Each post has a title, a caption, a date and a flag telling whether it has been published.
 
 ## Features
@@ -165,6 +167,10 @@ This runs the unit tests and checks that the service layer has **100% line cover
 The tests do not need a database or Docker to run.
 
 The coverage report is generated at `target/site/jacoco/index.html`.
+
+### Continuous integration
+
+Every push and pull request to `main` triggers a GitHub Actions workflow (`.github/workflows/ci.yml`) that builds the project, runs the tests, enforces the coverage rule and builds the Docker image. The coverage report is attached to each run as the `jacoco-report` artifact.
 
 ---
 
